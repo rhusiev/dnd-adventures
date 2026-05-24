@@ -1,0 +1,58 @@
+# Copyright or smth
+A_Most_Potent_Brew.pdf
+map.png
+puzzle.png
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.lot
+*.toc
+*.out
+*.fls
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Bibliography generated files
+*.bbl
+*.blg
+*.bcf
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build logs
+*.log
+
+# SyncTeX
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Build tool caches
+*.rubbercache
+*.fdb_latexmk
+
+# Output files
+*.pdf
+
+# Nix / direnv
+/result
+.direnv
+.cache/
+
+# Misc
+.DS_Store
+svg-inkscape/
+_minted*
+*.pyg
+pythontex-files-*/
+auto/

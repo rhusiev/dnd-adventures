@@ -1,0 +1,213 @@
+% rubber: module lualatex
+\documentclass[letterpaper,openany,oneside,twocolumn]{book}
+\usepackage[ukrainian]{babel}
+\usepackage{bookmark}
+\usepackage[justified]{dnd}
+\usepackage{ifthen}
+\usepackage{geometry}
+\usepackage{pstricks}
+
+\usepackage{dndtemplate}
+
+\setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
+\setlength\evensidemargin{\oddsidemargin}
+
+% Headline
+\CharacterName{Мерік Борзогін}
+
+% adds only main class and total level to prevent overflow
+\Class{Пройдисвіт 1}
+\Background{Шпигун}
+\PlayerName{}
+\Race{Піврослик}
+\Alignment{}
+\XP{Віха}
+
+% Ability scores
+\StrengthScore{8}
+\DexterityScore{17}
+\ConstitutionScore{12}
+\IntelligenceScore{14}
+\WisdomScore{10}
+\CharismaScore{14}
+
+% Ability modifiers
+\StrengthModifier{-1}
+\DexterityModifier{3}
+\ConstitutionModifier{1}
+\IntelligenceModifier{2}
+\WisdomModifier{0}
+\CharismaModifier{2}
+
+% Saving Throws
+\StrengthSavingThrowModifier{-1}
+\DexteritySavingThrowModifier{5}
+\ConstitutionSavingThrowModifier{1}
+\IntelligenceSavingThrowModifier{4}
+\WisdomSavingThrowModifier{0}
+\CharismaSavingThrowModifier{2}
+
+\AcrobaticsSkillModifier{5}
+\AnimalHandlingSkillModifier{0}
+\ArcanaSkillModifier{1}
+\AthleticsSkillModifier{-1}
+\DeceptionSkillModifier{4}
+\HistorySkillModifier{1}
+\InsightSkillModifier{0}
+\IntimidationSkillModifier{2}
+\InvestigationSkillModifier{4}
+\MedicineSkillModifier{0}
+\NatureSkillModifier{1}
+\PerceptionSkillModifier{2}
+\PerformanceSkillModifier{2}
+\PersuasionSkillModifier{2}
+\ReligionSkillModifier{1}
+\SleightOfHandSkillModifier{7}
+\StealthSkillModifier{7}
+\SurvivalSkillModifier{0}
+
+% Proficiencies
+\SetStrengthProficiency{0}
+\SetDexterityProficiency{1}
+\SetConstitutionProficiency{0}
+\SetIntelligenceProficiency{1}
+\SetWisdomProficiency{0}
+\SetCharismaProficiency{0}
+
+\SetAcrobaticsProficiency{1}
+\SetAnimalHandlingProficiency{0}
+\SetArcanaProficiency{0}
+\SetAthleticsProficiency{0}
+\SetDeceptionProficiency{1}
+\SetHistoryProficiency{0}
+\SetInsightProficiency{0}
+\SetIntimidationProficiency{0}
+\SetInvestigationProficiency{1}
+\SetMedicineProficiency{0}
+\SetNatureProficiency{0}
+\SetPerceptionProficiency{1}
+\SetPerformanceProficiency{0}
+\SetPersuasionProficiency{0}
+\SetReligionProficiency{0}
+\SetSleightOfHandProficiency{1} % Експертиза
+\SetStealthProficiency{1}       % Експертиза
+\SetSurvivalProficiency{0}
+
+\Inspiration{}
+\Proficiency{2}
+\Perception{12} % Пасивна увага
+
+\ArmorClass{14}
+\Initiative{5} % СПР +3 та бонус майстерності від Пильності +2
+\Speed{30}
+\MaxHitPoints{9}
+
+\MaxHitDice{1d8}
+\CurrentHitDice{}
+
+\CP{}
+\SP{}
+\GP{28}
+\EP{}
+\PP{}
+
+\AddWeapon{Кинджал}{+5}{1d4+3 Кол. (Витончена, Зарубка, Лег., Мет.)}
+\AddWeapon{Короткий лук}{+5}{1d6+3 Кол. (80/320, Дошкуляння)}
+\AddWeapon{Короткий меч}{+5}{1d6+3 Кол. (Витонч., Дошкуляння, Лег.)}
+\AddWeapon{Беззбройний}{+1}{1 Дроб.}
+
+\AttacksAdditional{
+\textbf{Підступна атака (1 / хід).}
+}
+
+\OtherProficienciesLanguages{\textbf{Мови:} Спільна мова, Спільна мова жестів, Півросликова мова, Підтемна мова, Злодійський жаргон. \\
+\textbf{Зброя:} Ручний арбалет, Рапіра, Ятаган, Короткий меч, Проста зброя, Батіг. \\
+\textbf{Броня:} Легка броня. \\
+\textbf{Інструменти:} Набір для гриму, Злодійські інструменти. \\
+\textbf{Зарубка:} Можна використати цю зброю після іншої легкої зброї без використання Бонусної дії. \\
+\textbf{Дошкуляння:} Якщо завдати ушкодження цією зброєю, ви отримуєте перевагу на наступний кидок атаки до кінця наступного ходу.
+}
+
+\Equipment{
+\begin{itemize}
+    \item Шкіряна броня
+    \item Кинджал
+    \item Короткий лук
+    \item Короткий меч
+    \item Спрямований ліхтар
+    \item Злодійські інструменти
+    \item Спальник
+    \item Набір для харчування
+    \item 10 Раціонів (на 1 день)
+    \item 50 фт. Конопляна мотузка
+    \item Трутниця
+    \item 10 Смолоскипів
+    \item Бурдюк
+\end{itemize}
+\textbf{Вага:} 72 фунти. \\
+}
+
+\PersonalityTraits{}
+
+\Ideals{}
+
+\Bonds{}
+
+\Flaws{}
+
+\FeaturesTraits{
+\textbf{Особливості Піврослика} \\
+\begin{itemize}
+    \item \textbf{Хоробрість:} Ви маєте перевагу на рятівні кидки, щоб уникнути або завершити стан Наляканий.
+    \item \textbf{Спритність піврослика:} Ви можете рухатися крізь простір будь-якої істоти, розмір якої більший за ваш, але не можете зупинятися в ньому.
+    \item \textbf{Вдача:} Якщо ви викидаєте '1' на d20, ви можете перекинути кубик і мусите використати новий результат.
+\end{itemize}
+
+\textbf{Риси} \\
+\begin{itemize}
+    \item \textbf{Пильність:}
+    \begin{itemize}
+        \item \textbf{Обмін ініціативою}: Одразу після кидка ініціативи ви можете помінятися результатами з одним згідним союзником у тому ж бою.
+    \end{itemize}
+    \item \textbf{Підступна атака (1 / хід):} Ви можете завдати додатково \textbf{1d6} ушкоджень одній істоті, в яку влучили атакою з перевагою, використовуючи витончену або далекобійну зброю. Перевага не потрібна, якщо принаймні один ваш дієздатний союзник перебуває в межах 5 фт. від цілі, і ви не маєте перешкоди на кидок атаки.
+\end{itemize}
+}
+
+% Appearance
+
+\Age{}
+\Height{}
+\Weight{}
+\Eyes{}
+\Skin{}
+\Hair{}
+
+% background
+
+\CharacterAppearance{
+}
+\AdditionalFeaturesAndTraits{
+}
+
+\Characterbackground{
+}
+
+\Treasure{
+}
+
+\AlliesAndOrganizations{
+}
+
+\OrganizationName{
+}
+
+
+\begin{document}
+\newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
+\onecolumn
+
+% CHARACTER PAGE
+\pdfbookmark[0]{Character Sheet}{Character Sheet}
+\rendercharactersheet
+
+\end{document}

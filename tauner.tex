@@ -1,0 +1,210 @@
+% rubber: module lualatex
+\documentclass[letterpaper,openany,oneside,twocolumn]{book}
+\usepackage[ukrainian]{babel}
+\usepackage{bookmark}
+\usepackage[justified]{dnd}
+\usepackage{ifthen}
+\usepackage{geometry}
+\usepackage{pstricks}
+
+\usepackage{dndtemplate}
+
+\setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
+\setlength\evensidemargin{\oddsidemargin}
+
+% Headline
+\CharacterName{Тавнер Каторіг}
+
+% adds only main class and total level to prevent overflow
+\Class{Варвар 1}
+\Background{Солдат}
+\PlayerName{}
+\Race{Голіат}
+\Alignment{}
+\XP{Віха}
+
+% Ability scores
+\StrengthScore{17}
+\DexterityScore{12}
+\ConstitutionScore{14}
+\IntelligenceScore{8}
+\WisdomScore{14}
+\CharismaScore{10}
+
+% Ability modifiers
+\StrengthModifier{3}
+\DexterityModifier{1}
+\ConstitutionModifier{2}
+\IntelligenceModifier{-1}
+\WisdomModifier{2}
+\CharismaModifier{0}
+
+% Saving Throws
+\StrengthSavingThrowModifier{5}
+\DexteritySavingThrowModifier{1}
+\ConstitutionSavingThrowModifier{4}
+\IntelligenceSavingThrowModifier{-1}
+\WisdomSavingThrowModifier{2}
+\CharismaSavingThrowModifier{0}
+
+\AcrobaticsSkillModifier{1}
+\AnimalHandlingSkillModifier{1}
+\ArcanaSkillModifier{-1}
+\AthleticsSkillModifier{5}
+\DeceptionSkillModifier{0}
+\HistorySkillModifier{-1}
+\InsightSkillModifier{2}
+\IntimidationSkillModifier{2}
+\InvestigationSkillModifier{-1}
+\MedicineSkillModifier{2}
+\NatureSkillModifier{-1}
+\PerceptionSkillModifier{2}
+\PerformanceSkillModifier{0}
+\PersuasionSkillModifier{0}
+\ReligionSkillModifier{-1}
+\SleightOfHandSkillModifier{1}
+\StealthSkillModifier{1}
+\SurvivalSkillModifier{4}
+
+% Proficiencies
+\SetStrengthProficiency{1}
+\SetDexterityProficiency{0}
+\SetConstitutionProficiency{1}
+\SetIntelligenceProficiency{0}
+\SetWisdomProficiency{0}
+\SetCharismaProficiency{0}
+
+\SetAcrobaticsProficiency{0}
+\SetAnimalHandlingProficiency{0}
+\SetArcanaProficiency{0}
+\SetAthleticsProficiency{1}
+\SetDeceptionProficiency{0}
+\SetHistoryProficiency{0}
+\SetInsightProficiency{0}
+\SetIntimidationProficiency{1}
+\SetInvestigationProficiency{0}
+\SetMedicineProficiency{0}
+\SetNatureProficiency{0}
+\SetPerceptionProficiency{0}
+\SetPerformanceProficiency{0}
+\SetPersuasionProficiency{0}
+\SetReligionProficiency{0}
+\SetSleightOfHandProficiency{0}
+\SetStealthProficiency{0}
+\SetSurvivalProficiency{1}
+
+\Inspiration{}
+\Proficiency{2}
+\Perception{12}
+
+\ArmorClass{13}
+\Initiative{1}
+\Speed{35}
+\MaxHitPoints{14}
+
+\MaxHitDice{1d12}
+\CurrentHitDice{}
+
+\CP{}
+\SP{}
+\GP{55}
+\EP{}
+\PP{}
+
+
+\AddWeapon{Кувалда}{+5}{2d6+3 Дроб. (Дворучна, Збивання)}
+\AddWeapon{Спис}{+5}{1d6+3 Кол. (20/60, Унів., Знесил.)}
+\AddWeapon{Беззбройний удар}{+5}{4 Дробильні}
+
+
+\AttacksAdditional{
+\textbf{Бонусна дія:} Лють. \\
+\textbf{Реакція:} Стійкість каменю. \\
+}
+
+\OtherProficienciesLanguages{\textbf{Мови:} Спільна мова, Велетова мова, Оркська мова. \\
+\textbf{Зброя}: Проста зброя, Бойова зброя. \\
+\textbf{Броня}: Броня (Легка, Середня), Щити. \\
+\textbf{Інструменти}: Дротики (гра). \\
+\textbf{Збивання:} Якщо влучили по істоті, вона має здійснити Рятівний кидок Статури (Складність 13). При невдачі, впадає в Лежачий стан. \\
+\textbf{Знесилення:} Якщо влучили по істоті, вона отримує перешкоду на наступну атаку до початку вашого наступного ходу.\\
+}
+
+\Equipment{
+\begin{itemize}
+    \item 5 Списів
+    \item Кувалда
+    \item 10 Смолоскипів
+\end{itemize}
+\textbf{Вага:} 27 фунтів. \\
+}
+
+\PersonalityTraits{}
+
+\Ideals{}
+
+\Bonds{}
+
+\Flaws{}
+
+\FeaturesTraits{
+\textbf{Особливості Варвара} \\
+\begin{itemize}
+    \item \textbf{Лють} (2 / Трив. відп., +1 / Короткий відп.): Ви можете увійти в стан Люті бонусною дією, якщо не носите важку броню. Ви отримуєте бонус +2 до ушкоджень атаками ближнього бою, що використовують Силу.
+    \item Захист без броні: Якщо ви не носите броню, ваш КЗ дорівнює 10 + модифікатор Спритності + модифікатор Статури (ви можете використовувати щит).
+\end{itemize}
+
+\textbf{Особливості Голіата} \\
+\begin{itemize}
+    \item Могутня статура: Перевага на перевірки для завершення стану Схоплений. Ви вважаєтесь на розмір більшими для визначення вантажопідйомності.
+\end{itemize}
+
+\textbf{Походження Гігантів} \\
+\begin{itemize}
+    \item \textbf{Стійкість каменю} (2 / Трив. відп.): Коли ви отримуєте ушкодження, киньте 1d12+2 і зменште шкоду на цю суму. \\
+\end{itemize}
+
+\textbf{Риси} \\
+\begin{itemize}
+    \item \textbf{Дикий атакувальник}: Раз на хід при влучанні зброєю ви можете кинути кісточки ушкодження двічі та використати кращий результат.
+\end{itemize}
+}
+
+% Appearance
+
+\Age{}
+\Height{}
+\Weight{}
+\Eyes{}
+\Skin{}
+\Hair{}
+
+% background
+
+\CharacterAppearance{
+}
+\AdditionalFeaturesAndTraits{
+}
+
+\Characterbackground{
+}
+
+\Treasure{
+}
+
+\AlliesAndOrganizations{
+}
+
+\OrganizationName{
+}
+
+
+\begin{document}
+\newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
+\onecolumn
+
+% CHARACTER PAGE
+\pdfbookmark[0]{Character Sheet}{Character Sheet}
+\rendercharactersheet
+
+\end{document}
