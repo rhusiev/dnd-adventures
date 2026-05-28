@@ -2,7 +2,7 @@
 \documentclass[letterpaper,openany,oneside,twocolumn]{book}
 \usepackage[ukrainian]{babel}
 \usepackage{bookmark}
-\usepackage[justified]{dnd}
+\usepackage[justified, bg=print]{dnd}
 \usepackage{ifthen}
 \usepackage{geometry}
 \usepackage{pstricks}
@@ -12,26 +12,22 @@
 \setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
 \setlength\evensidemargin{\oddsidemargin}
 
-% Headline
 \CharacterName{Мерік Борзогін}
 
-% adds only main class and total level to prevent overflow
 \Class{Пройдисвіт 1}
-\Background{Шпигун}
+\Background{}
 \PlayerName{}
 \Race{Піврослик}
 \Alignment{}
-\XP{Віха}
+\XP{}
 
-% Ability scores
-\StrengthScore{8}
-\DexterityScore{17}
-\ConstitutionScore{12}
-\IntelligenceScore{14}
-\WisdomScore{10}
-\CharismaScore{14}
+\StrengthScore{}
+\DexterityScore{}
+\ConstitutionScore{}
+\IntelligenceScore{}
+\WisdomScore{}
+\CharismaScore{}
 
-% Ability modifiers
 \StrengthModifier{-1}
 \DexterityModifier{3}
 \ConstitutionModifier{1}
@@ -39,7 +35,6 @@
 \WisdomModifier{0}
 \CharismaModifier{2}
 
-% Saving Throws
 \StrengthSavingThrowModifier{-1}
 \DexteritySavingThrowModifier{5}
 \ConstitutionSavingThrowModifier{1}
@@ -66,7 +61,6 @@
 \StealthSkillModifier{7}
 \SurvivalSkillModifier{0}
 
-% Proficiencies
 \SetStrengthProficiency{0}
 \SetDexterityProficiency{1}
 \SetConstitutionProficiency{0}
@@ -89,62 +83,56 @@
 \SetPerformanceProficiency{0}
 \SetPersuasionProficiency{0}
 \SetReligionProficiency{0}
-\SetSleightOfHandProficiency{1} % Експертиза
-\SetStealthProficiency{1}       % Експертиза
+\SetSleightOfHandProficiency{1}
+\SetStealthProficiency{1}
 \SetSurvivalProficiency{0}
 
 \Inspiration{}
-\Proficiency{2}
-\Perception{12} % Пасивна увага
+\Proficiency{-}
+\Perception{12}
 
 \ArmorClass{14}
 \Initiative{5} % СПР +3 та бонус майстерності від Пильності +2
 \Speed{30}
 \MaxHitPoints{9}
 
-\MaxHitDice{1d8}
+\MaxHitDice{}
 \CurrentHitDice{}
 
 \CP{}
 \SP{}
-\GP{28}
+\GP{}
 \EP{}
 \PP{}
 
-\AddWeapon{Кинджал}{+5}{1d4+3 Кол. (Витончена, Зарубка, Лег., Мет.)}
-\AddWeapon{Короткий лук}{+5}{1d6+3 Кол. (80/320, Дошкуляння)}
-\AddWeapon{Короткий меч}{+5}{1d6+3 Кол. (Витонч., Дошкуляння, Лег.)}
-\AddWeapon{Беззбройний}{+1}{1 Дроб.}
+\AddWeapon{Кинджал}{+5}{1d4+3 Кол. (20/60 фт, \textit{див Уміння})}
+\AddWeapon{Короткий лук}{+5}{1d6+3 Кол. (80/320 фт, \textit{див Уміння})}
+\AddWeapon{Короткий меч}{+5}{1d6+3 Кол. (\textit{див Уміння})}
 
 \AttacksAdditional{
-\textbf{Підступна атака (1 / хід).}
+\textbf{ДОДАТКОВІ ЕФЕКТИ ДО АТАК:} \\
+\textbf{Підступна атака (1 / хід):} +1d6 ушкодження \textit{Див Уміння} \\
+\textbf{ІНШІ ДІЇ:} \\
+\textbf{Сховатися:} Перевірка Непомітності (+7) проти Уваги ворога, щоб стати непомітним. \\
+\textbf{Взаємодія:} Відкрити замок або знешкодити пастку. \\
+\textbf{Атака другою зброєю:} \textit{Див Уміння (Зарубка)}
 }
 
-\OtherProficienciesLanguages{\textbf{Мови:} Спільна мова, Спільна мова жестів, Півросликова мова, Підтемна мова, Злодійський жаргон. \\
-\textbf{Зброя:} Ручний арбалет, Рапіра, Ятаган, Короткий меч, Проста зброя, Батіг. \\
-\textbf{Броня:} Легка броня. \\
-\textbf{Інструменти:} Набір для гриму, Злодійські інструменти. \\
-\textbf{Зарубка:} Можна використати цю зброю після іншої легкої зброї без використання Бонусної дії. \\
-\textbf{Дошкуляння:} Якщо завдати ушкодження цією зброєю, ви отримуєте перевагу на наступний кидок атаки до кінця наступного ходу.
+\OtherProficienciesLanguages{%
+\textbf{Інструменти:} Злодійські інструменти. \\
 }
 
 \Equipment{
+\textbf{Спорядження:}
 \begin{itemize}
-    \item Шкіряна броня
-    \item Кинджал
-    \item Короткий лук
-    \item Короткий меч
-    \item Спрямований ліхтар
-    \item Злодійські інструменти
-    \item Спальник
-    \item Набір для харчування
-    \item 10 Раціонів (на 1 день)
-    \item 50 фт. Конопляна мотузка
-    \item Трутниця
-    \item 10 Смолоскипів
-    \item Бурдюк
+    \item Шкіряна броня \\
+    \item Короткий лук (та стріли) \\
+    \item Короткий меч \\
+    \item Кинджали (4) \\
+    \item Злодійські інструменти \\
+    \item Спрямований іхтар \\
+    \item 50 фт. Конопляна мотузка \\
 \end{itemize}
-\textbf{Вага:} 72 фунти. \\
 }
 
 \PersonalityTraits{}
@@ -158,22 +146,22 @@
 \FeaturesTraits{
 \textbf{Особливості Піврослика} \\
 \begin{itemize}
-    \item \textbf{Хоробрість:} Ви маєте перевагу на рятівні кидки, щоб уникнути або завершити стан Наляканий.
-    \item \textbf{Спритність піврослика:} Ви можете рухатися крізь простір будь-якої істоти, розмір якої більший за ваш, але не можете зупинятися в ньому.
-    \item \textbf{Вдача:} Якщо ви викидаєте '1' на d20, ви можете перекинути кубик і мусите використати новий результат.
+    \item \textbf{Вдача:} Якщо викидаєш '1' на кубику d20, ти маєш перекинути кубик і використати новий результат.
+    \item \textbf{Хоробрість:} Ти маєш \textit{Перевагу} на рятівні кидки від стану Наляканий.
 \end{itemize}
 
-\textbf{Риси} \\
+\textbf{Особливості Пройдисвіта} \\
 \begin{itemize}
-    \item \textbf{Пильність:}
-    \begin{itemize}
-        \item \textbf{Обмін ініціативою}: Одразу після кидка ініціативи ви можете помінятися результатами з одним згідним союзником у тому ж бою.
-    \end{itemize}
-    \item \textbf{Підступна атака (1 / хід):} Ви можете завдати додатково \textbf{1d6} ушкоджень одній істоті, в яку влучили атакою з перевагою, використовуючи витончену або далекобійну зброю. Перевага не потрібна, якщо принаймні один ваш дієздатний союзник перебуває в межах 5 фт. від цілі, і ви не маєте перешкоди на кидок атаки.
+    \item \textbf{Пильність:} Одразу після кидка Ініціативи (на початку бою) ти можеш помінятися результатами з одним згодним союзником.
+    \item \textbf{Підступна атака (1 раз на хід):} Ти завдаєш додатково \textbf{1d6} шкоди ворогу, якщо маєш \textit{Перевагу} на атаку або якщо твій дієздатний союзник стоїть впритул до цього ворога.
+\end{itemize}
+
+\textbf{Особливості Зброї} \\
+\begin{itemize}
+    \item \textbf{Дошкуляння} (Меч, Лук): Якщо ти завдаєш шкоди цією зброєю, твоя наступна атака по цьому ж ворогу до кінця наступного ходу має \textit{Перевагу}.
+    \item \textbf{Зарубка} (Кинджал): Якщо атакував Коротким мечем чи Кинджалом як дією, можеш відразу зробити ще одну безкоштовну атаку Кинджалом (без використання Бонусної дії).
 \end{itemize}
 }
-
-% Appearance
 
 \Age{}
 \Height{}
@@ -181,8 +169,6 @@
 \Eyes{}
 \Skin{}
 \Hair{}
-
-% background
 
 \CharacterAppearance{
 }
@@ -206,7 +192,6 @@
 \newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
 \onecolumn
 
-% CHARACTER PAGE
 \pdfbookmark[0]{Character Sheet}{Character Sheet}
 \rendercharactersheet
 

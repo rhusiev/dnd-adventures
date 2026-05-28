@@ -2,7 +2,7 @@
 \documentclass[letterpaper,openany,oneside,twocolumn]{book}
 \usepackage[ukrainian]{babel}
 \usepackage{bookmark}
-\usepackage[justified]{dnd}
+\usepackage[justified, bg=print]{dnd}
 \usepackage{ifthen}
 \usepackage{geometry}
 \usepackage{pstricks}
@@ -12,26 +12,22 @@
 \setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
 \setlength\evensidemargin{\oddsidemargin}
 
-% Headline
 \CharacterName{Міра Шипогибель}
 
-% adds only main class and total level to prevent overflow
 \Class{Боєць 1}
-\Background{Солдат}
+\Background{}
 \PlayerName{}
 \Race{Людина}
 \Alignment{}
-\XP{Віха}
+\XP{}
 
-% Ability scores
-\StrengthScore{17}
-\DexterityScore{12}
-\ConstitutionScore{14}
-\IntelligenceScore{14}
-\WisdomScore{8}
-\CharismaScore{10}
+\StrengthScore{}
+\DexterityScore{}
+\ConstitutionScore{}
+\IntelligenceScore{}
+\WisdomScore{}
+\CharismaScore{}
 
-% Ability modifiers
 \StrengthModifier{3}
 \DexterityModifier{1}
 \ConstitutionModifier{2}
@@ -39,7 +35,6 @@
 \WisdomModifier{-1}
 \CharismaModifier{0}
 
-% Saving Throws
 \StrengthSavingThrowModifier{5}
 \DexteritySavingThrowModifier{1}
 \ConstitutionSavingThrowModifier{4}
@@ -66,8 +61,6 @@
 \StealthSkillModifier{1}
 \SurvivalSkillModifier{-1}
 
-% Proficiencies (1 - proficient, 0 - not)
-% Saving Throw Proficiencies
 \SetStrengthProficiency{1}
 \SetDexterityProficiency{0}
 \SetConstitutionProficiency{1}
@@ -75,7 +68,6 @@
 \SetWisdomProficiency{0}
 \SetCharismaProficiency{0}
 
-% Skill Proficiencies
 \SetAcrobaticsProficiency{0}
 \SetAnimalHandlingProficiency{1}
 \SetArcanaProficiency{0}
@@ -96,7 +88,7 @@
 \SetSurvivalProficiency{0}
 
 \Inspiration{}
-\Proficiency{2}
+\Proficiency{-}
 \Perception{11}
 
 \ArmorClass{17}
@@ -104,42 +96,42 @@
 \Speed{30}
 \MaxHitPoints{12}
 
-\MaxHitDice{1d10}
+\MaxHitDice{}
 \CurrentHitDice{}
 
 \CP{}
-\SP{5}
+\SP{}
 \GP{}
 \EP{}
 \PP{}
 
 
-\AddWeapon{Дворучний меч}{+5}{2d6+3 Рубані (Ковзний удар)}
-\AddWeapon{Короткий лук}{+3}{1d6+1 Колоті (Дошкуляння, 80/320)}
-\AddWeapon{Беззбройний удар}{+5}{4 Дробильні}
+\AddWeapon{Дворучний меч}{+5}{2d6+3 Рубані (\textit{див Уміння})}
+\AddWeapon{Короткий лук}{+3}{1d6+1 Колоті (80/320 фт, \textit{див Уміння})}
 
 
 \AttacksAdditional{
-\textbf{Бонусна дія:} Друге дихання (Віднов. 1d10+1 ПЗ. 2 / Трив. відп., +1 використ. після Коротк. відп.). \\
+\textbf{БОНУСНІ ДІЇ:} \\
+\textbf{Друге дихання:} Відновлює 1d10+1 ПЗ (2 рази на день. 1 використання відновлюється під час короткого відпочинку).
 }
 
-\OtherProficienciesLanguages{\textbf{Мови:} Спільна мова, Спільна мова жестів, Ельфійська мова. \\
-\textbf{Зброя}: Проста зброя, Бойова зброя. \\
-\textbf{Броня}: Броня (Легка, Середня, Важка), Щити. \\
-\textbf{Інструменти}: Набір гральних карт. \\
-\textbf{Ковзний удар:} Якщо промахнулися з кидком атаки, наносите ушкодження рівне модифікатору вміння. \\
-\textbf{Дошкуляння:} Якщо завдати ушкодження цією зброєю, ви отримуєте перевагу на наступний кидок атаки до кінця наступного ходу.
+\OtherProficienciesLanguages{
 }
 
 \Equipment{
+\textbf{Удача:} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \\
+\vspace{0.5em}
+
+\textbf{Спорядження:}
 \begin{itemize}
-    \item Кольчуга
-    \item Короткий лук
-    \item Дворучний меч
-    \item Закритий ліхтар
-    \item 2 Фляги з олією
+    \item Кольчуга \\
+    \item Дворучний меч \\
+    \item Короткий лук (та стріли) \\
+    \item Закритий ліхтар \\
+    \item 2 Фляги з олією \\
 \end{itemize}
-\textbf{Вага:} 65 фунтів. \\
 }
 
 \PersonalityTraits{}
@@ -151,25 +143,22 @@
 \Flaws{}
 
 \FeaturesTraits{
-\textbf{Особливості Бійця} \\
-\begin{itemize}
-    \item \textbf{Друге дихання:} Бонусною дією ви можете звернутися до власних резервів витривалості й відновити 1d10+1 ПЗ. Ви можете використати цю рису 2 рази. Усі використання відновлюються після Тривалого відпочинку; ви відновлюєте одне використання після Короткого відпочинку.
-    \item Бойовий стиль (Захист): Ви отримуєте бонус +1 до Класу Захисту, коли носите броню.
-\end{itemize}
-
 \textbf{Особливості Людини} \\
 \begin{itemize}
-    \item \textbf{Винахідливість:} Ви отримуєте Героїчне Натхнення щоразу, коли завершуєте Тривалий відпочинок.
+    \item \textbf{Винахідливість:} Отримуєш Натхнення щоразу після тривалого відпочинку.
 \end{itemize}
 
 \textbf{Риси} \\
 \begin{itemize}
-    \item \textbf{Удача:} Ви маєте 2 Пункти удачі, які відновлюються після Тривалого відпочинку. Коли ви кидаєте d20 для перевірки, ви можете витратити 1 Пункт удачі, щоб отримати Перевагу на цей кидок. Коли істота кидає d20 для атаки по вас, ви можете витратити 1 Пункт удачі, щоб накласти Перешкоду на цей кидок.
-    % \item \textbf{Жорстокий атакувальник:} Раз на хід, коли ви влучаєте по цілі зброєю, можете кинути кубики ушкоджень зброї двічі та використати будь-який з двох результатів.
+    \item \textbf{Удача:} Маєш 2 Пункти удачі на день. Коли кидаєш d20, можеш витратити 1 пункт, щоб отримати \textit{Перевагу}. Коли ворог атакує тебе, можеш витратити 1 пункт, щоб накласти \textit{Перешкоду} на його кидок.
+\end{itemize}
+
+\textbf{Особливості Зброї} \\
+\begin{itemize}
+    \item \textbf{Ковзний удар} (Дворучний меч): Якщо промахнувся цією атакою, ти все одно завдаєш 3 одиниці шкоди.
+    \item \textbf{Дошкуляння} (Лук): Якщо ти завдаєш шкоди цією зброєю, твоя наступна атака по цьому ж ворогу до кінця наступного ходу має \textit{Перевагу}.
 \end{itemize}
 }
-
-% Appearance
 
 \Age{}
 \Height{}
@@ -177,8 +166,6 @@
 \Eyes{}
 \Skin{}
 \Hair{}
-
-% background
 
 \CharacterAppearance{
 }
@@ -202,7 +189,6 @@
 \newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
 \onecolumn
 
-% CHARACTER PAGE
 \pdfbookmark[0]{Character Sheet}{Character Sheet}
 \rendercharactersheet
 

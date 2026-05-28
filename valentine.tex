@@ -2,7 +2,7 @@
 \documentclass[letterpaper,openany,oneside,twocolumn]{book}
 \usepackage[ukrainian]{babel}
 \usepackage{bookmark}
-\usepackage[justified]{dnd}
+\usepackage[justified, bg=print]{dnd}
 \usepackage{ifthen}
 \usepackage{geometry}
 \usepackage{pstricks}
@@ -12,26 +12,22 @@
 \setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
 \setlength\evensidemargin{\oddsidemargin}
 
-% Headline
 \CharacterName{Валентин Лебедан}
 
-% adds only main class and total level to prevent overflow
 \Class{Чарівник 1}
-\Background{Мудрець}
+\Background{}
 \PlayerName{}
 \Race{Ельф (Лісовий)}
 \Alignment{}
-\XP{Віха}
+\XP{}
 
-% Ability scores
-\StrengthScore{10}
-\DexterityScore{14}
-\ConstitutionScore{12}
-\IntelligenceScore{17}
-\WisdomScore{14}
-\CharismaScore{8}
+\StrengthScore{}
+\DexterityScore{}
+\ConstitutionScore{}
+\IntelligenceScore{}
+\WisdomScore{}
+\CharismaScore{}
 
-% Ability modifiers
 \StrengthModifier{0}
 \DexterityModifier{2}
 \ConstitutionModifier{1}
@@ -39,7 +35,6 @@
 \WisdomModifier{2}
 \CharismaModifier{-1}
 
-% Saving Throws
 \StrengthSavingThrowModifier{0}
 \DexteritySavingThrowModifier{2}
 \ConstitutionSavingThrowModifier{1}
@@ -66,7 +61,6 @@
 \StealthSkillModifier{2}
 \SurvivalSkillModifier{4}
 
-% Proficiencies
 \SetStrengthProficiency{0}
 \SetDexterityProficiency{0}
 \SetConstitutionProficiency{0}
@@ -94,7 +88,7 @@
 \SetSurvivalProficiency{1}
 
 \Inspiration{}
-\Proficiency{2}
+\Proficiency{-}
 \Perception{12}
 
 \ArmorClass{12}
@@ -102,43 +96,42 @@
 \Speed{35}
 \MaxHitPoints{7}
 
-\MaxHitDice{1d6}
+\MaxHitDice{}
 \CurrentHitDice{}
 
-\CP{0}
-\SP{0}
-\GP{60}
-\EP{0}
-\PP{0}
+\CP{}
+\SP{}
+\GP{}
+\EP{}
+\PP{}
 
-\AddWeapon{Промінь холоду}{+5}{1d8 Холод (В, С)}
-\AddWeapon{Електричний дотик}{+5}{1d8 Блискавка (В, С)}
-\AddWeapon{Беззбройний удар}{+2}{1 Дробильні}
+\AddWeapon{Промінь холоду}{+5}{1d8 Холод (60 фт, \textit{див Уміння})}
+\AddWeapon{Електричний дотик}{+5}{1d8 Блискавка (Дотик, \textit{див Уміння})}
+\AddWeapon{Кинджал}{+4}{1d4+2 Кол. (20/60 фт)}
 
 \AttacksAdditional{
-\textbf{Пекучі долоні:} конус 15 фт., 3d6 вогнем, при успішному рятівному кидку Спритності - половина \\
-\textbf{Магічний дротик:} 120 фт., три дротики, кожен завдає 1d4+1 \\
-\textbf{Сон} 90 фт., радіус 5 фт. Рят. кидок Муд - інакше недієздатна до наст. ходу. Якщо наст. ходу провалює, засинає на хвилину \\
-\textbf{Обладунок мага} Клас захисту стає 13 + Мод. Спритності \\
-\textbf{Стандартні дії.}
+\textbf{Пекучі долоні (чарунка):} (Конус 15 фт) Ворогам рят. кидок СПР 13. Провал - 3d6 вогнем, успіх - половина. \\
+\textbf{Магічний дротик (чарунка):} (120 фт) 3 дротики. \\Можна в різних ворогів. Завжди влучають. Кожен 1d4+1. \\
+\textbf{Сон (чарунка):} (90 фт, радіус 5 фт) \textit{Див Уміння} \\
+\textbf{Обладунок мага (чарунка):} Клас зах. стає 13+СПР \\
+\textbf{Світло / Мист-во друїдів:} Світло, дрібні звуки, ефекти...
 }
 
-\OtherProficienciesLanguages{\textbf{Мови:} Спільна мова, Ельфійська мова, Півросликова мова. \\
-\textbf{Почуття:} Темний зір 60 фт. \\
+\OtherProficienciesLanguages{\textbf{Почуття:} Темний зір 60 фт. \\
 \textbf{Імунітети:} Магічний сон. \\
-\textbf{Зброя}: Проста зброя. \\
-\textbf{Інструменти}: Приладдя каліграфа. \\}
+}
 
 \Equipment{
+\textbf{Чарунки:} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \\
+\vspace{0.5em}
+
+\textbf{Спорядження:}
 \begin{itemize}
-    \item Магічний фокус (Чарівна паличка)
-    \item Книга заклинань
-    \item Кинджал
-    \item Спальник
-    \item Бурдюк
-    \item 10 Раціонів (на 1 день)
+    \item Книга заклинань \\
+    \item Кинджал \\
 \end{itemize}
-\textbf{Вага:} 14 фунтів. \\
 }
 
 \PersonalityTraits{}
@@ -152,18 +145,16 @@
 \FeaturesTraits{
 \textbf{Особливості Чарівника} \\
 \begin{itemize}
-    \item \textbf{Арканне відновлення:} 1 / Тривалий відпочинок. Під час короткого відпочинку ви можете відновити витрачені чарунки із загальним рівнем не більше 1.
-
+    \item \textbf{Арканне відновлення:} Під час короткого відпочинку ви можете відновити 1 витрачену чарунку (1 раз на день).
 \end{itemize}
 
-\textbf{Особливості Ельфа (Лісового)} \\
+\textbf{Особливості Заклинань} \\
 \begin{itemize}
-    \item Феєвий родовід: Перевага на рятівні кидки від стану Причарований.
-    \item Транс: Ви не потребуєте сну, магія не може вас приспати. Тривалий відпочинок завершується за 4 години медитації.
+    \item \textbf{Промінь холоду:} Якщо влучив, швидкість ворога зменшується на 10 фт до твого наступного ходу.
+    \item \textbf{Електричний дотик:} Якщо влучив, ворог не може використовувати Реакції до свого наступного ходу.
+    \item \textbf{Сон:} Обрані істоти в радіусі 5 фт роблять рят. кидок МУД 13. Провал - стають недієздатними до наступного ходу. Якщо провалять вдруге - засинають на 1 хв. Прокидаються від отриманої шкоди або якщо хтось розбудить їх дією.
 \end{itemize}
 }
-
-% Appearance
 
 \Age{}
 \Height{}
@@ -171,8 +162,6 @@
 \Eyes{}
 \Skin{}
 \Hair{}
-
-% background
 
 \CharacterAppearance{
 }
@@ -193,110 +182,18 @@
 
 %Magic
 \SpellcastingClass{Чарівник 1}
-\SpellcastingAbility{ІНТ}
+\SpellcastingAbility{}
 \SpellSaveDC{13}
-\SpellAttackBonus{+5}
+\SpellAttackBonus{}
 
 \FirstLevelSpellSlotsTotal{2}
 
-\FirstLevelSpellSlotA{Пекучі долоні}
-\FirstLevelSpellSlotAPrepared{True}
-\FirstLevelSpellSlotB{Обладунок мага}
-\FirstLevelSpellSlotBPrepared{True}
-\FirstLevelSpellSlotC{Магічний дротик}
-\FirstLevelSpellSlotCPrepared{True}
-\FirstLevelSpellSlotD{Сон}
-\FirstLevelSpellSlotDPrepared{True}
-\CantripSlotA{Промінь холоду}
-\CantripSlotB{Світло}
-\CantripSlotC{Електричний дотик}
-\CantripSlotD{Мистецтво друїдів}
-
-\newcommand{\spellsheetchoice}{\renderspellsheet}
 
 \begin{document}
 \newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
 \onecolumn
 
-% CHARACTER PAGE
 \pdfbookmark[0]{Character Sheet}{Character Sheet}
 \rendercharactersheet
-
-% SPELLCASTING PAGE
-\pdfbookmark[0]{Spellcasting Sheet}{Spellcasting Sheet}
-\spellsheetchoice
-
-% SPELL LIST
-\clearpage
-\twocolumn
-\pdfbookmark[0]{Spell Reference}{Spell Reference}
-\chapter*{Довідник заклинань}
-\setlength{\parindent}{0pt}
-
-\section*{Замовляння}
-
-\subsection*{Промінь холоду}
-\textit{Замовляння, Втілення}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 60 футів \\
-\textbf{Тривалість:} Миттєва \\
-Ви спрямовуєте синювато-білий промінь до істоти в межах дистанції. Здійсніть дальню атаку чарами по цілі. При влучанні вона отримує \textbf{1d8} ушкоджень холодом, а її швидкість зменшується на 10 футів до початку вашого наступного ходу.
-
-\subsection*{Світло}
-\textit{Замовляння, Виклик}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} Дотик \\
-\textbf{Тривалість:} 1 година \\
-Ви торкаєтеся предмета Великого чи меншого розміру, який ніхто не носить і не несе. Поки триває дія чари, предмет випромінює яскраве світло в радіусі 20 футів і тьмяне світло ще на 20 футів. Колір світла обираєте ви.
-
-\subsection*{Електричний дотик}
-\textit{Замовляння, Втілення}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} Дотик \\
-\textbf{Тривалість:} Миттєва \\
-Блискавка виривається з ваших пальців до істоти, якої ви намагаєтеся торкнутися. Здійсніть рукопашну атаку чарами; при влучанні ціль отримує \textbf{1d8} ушкоджень електрикою та не може виконувати реакції до початку свого наступного ходу.
-
-\subsection*{Мистецтво друїдів}
-\textit{Замовляння, Перетворення}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 30 футів \\
-\textbf{Тривалість:} Миттєва \\
-Тихим шепотом до духів природи ви народжуєте один із невеличких ефектів у межах дистанції. Виберіть одну з наведених опцій.
-\begin{itemize}
-    \item Створюєте крихітний нешкідливий сенсорний знак, що передбачає погоду у вашій місцевості на наступну добу. Символ існує 1 раунд.
-    \item Миттєво розквітає квітка, проростає насінина або розпускається брунька.
-    \item Створюєте нешкідливий відчутний прояв на кшталт опалого листя, танцюючих примарних світляків, легкого вітерцю тощо. Ефект поміщається в кубі зі стороною 5 фт.
-    \item Запалюєте або гасите свічку, смолоскип чи вогнище.
-\end{itemize}
-
-\section*{1-й рівень}
-
-\subsection*{Пекучі долоні}
-\textit{1 рівень, Втілення}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} На себе (Конус 15 футів) \\
-\textbf{Тривалість:} Миттєва \\
-Полум'яний струмінь виривається від вас конусом зі стороною 15 футів. Кожна істота в області здійснює рятівний кидок Спритності. У разі провалу ціль отримує \textbf{3d6} ушкоджень вогнем, а при успіху — половину.
-
-\subsection*{Обладунок мага}
-\textit{1 рівень, Перешкоджання}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} Дотик \\
-\textbf{Тривалість:} 8 годин \\
-Ви торкаєтеся згодної істоти. Поки чари тривають, її базовий Клас Захисту стає 13 + модифікатор Спритності. Припиняється, якщо істота вдягає обладунок.
-
-\subsection*{Магічний дротик}
-\textit{1 рівень, Втілення}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 120 футів \\
-\textbf{Тривалість:} Миттєва \\
-Ви формуєте три світні дротики магічної сили та спрямовуєте в істот (можна різних), що ви бачите в межах дистанції. Кожен завдає \textbf{1d4 + 1} ушкоджень силовим полем.
-
-\subsection*{Сон}
-\textit{1 рівень, Зачарування}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 90 футів \\
-\textbf{Тривалість:} 1 хвилина \\
-Кожна істота на ваш вибір у радіусі 5 футів здійснює рятівний кидок Мудрості. При провалі ціль стає недієздатною до кінця свого наступного ходу, після чого повторює рятівний кидок. Якщо другий кидок провалений, істота засинає, стаючи непритомною. Припиняється для істоти, якщо отримує ушкодження або якщо хтось у межах 5 футів витрачає дію, щоб розбудити її.
 
 \end{document}

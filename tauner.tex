@@ -2,7 +2,7 @@
 \documentclass[letterpaper,openany,oneside,twocolumn]{book}
 \usepackage[ukrainian]{babel}
 \usepackage{bookmark}
-\usepackage[justified]{dnd}
+\usepackage[justified, bg=print]{dnd}
 \usepackage{ifthen}
 \usepackage{geometry}
 \usepackage{pstricks}
@@ -12,26 +12,22 @@
 \setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
 \setlength\evensidemargin{\oddsidemargin}
 
-% Headline
 \CharacterName{Тавнер Каторіг}
 
-% adds only main class and total level to prevent overflow
 \Class{Варвар 1}
-\Background{Солдат}
+\Background{}
 \PlayerName{}
 \Race{Голіат}
 \Alignment{}
-\XP{Віха}
+\XP{}
 
-% Ability scores
-\StrengthScore{17}
-\DexterityScore{12}
-\ConstitutionScore{14}
-\IntelligenceScore{8}
-\WisdomScore{14}
-\CharismaScore{10}
+\StrengthScore{}
+\DexterityScore{}
+\ConstitutionScore{}
+\IntelligenceScore{}
+\WisdomScore{}
+\CharismaScore{}
 
-% Ability modifiers
 \StrengthModifier{3}
 \DexterityModifier{1}
 \ConstitutionModifier{2}
@@ -39,7 +35,6 @@
 \WisdomModifier{2}
 \CharismaModifier{0}
 
-% Saving Throws
 \StrengthSavingThrowModifier{5}
 \DexteritySavingThrowModifier{1}
 \ConstitutionSavingThrowModifier{4}
@@ -66,7 +61,6 @@
 \StealthSkillModifier{1}
 \SurvivalSkillModifier{4}
 
-% Proficiencies
 \SetStrengthProficiency{1}
 \SetDexterityProficiency{0}
 \SetConstitutionProficiency{1}
@@ -94,7 +88,7 @@
 \SetSurvivalProficiency{1}
 
 \Inspiration{}
-\Proficiency{2}
+\Proficiency{-}
 \Perception{12}
 
 \ArmorClass{13}
@@ -102,41 +96,39 @@
 \Speed{35}
 \MaxHitPoints{14}
 
-\MaxHitDice{1d12}
+\MaxHitDice{}
 \CurrentHitDice{}
 
 \CP{}
 \SP{}
-\GP{55}
+\GP{}
 \EP{}
 \PP{}
 
 
-\AddWeapon{Кувалда}{+5}{2d6+3 Дроб. (Дворучна, Збивання)}
-\AddWeapon{Спис}{+5}{1d6+3 Кол. (20/60, Унів., Знесил.)}
-\AddWeapon{Беззбройний удар}{+5}{4 Дробильні}
+\AddWeapon{Кувалда}{+5}{2d6+3 Дроб. (\textit{див Уміння})}
+\AddWeapon{Спис}{+5}{1d6+3 Кол. (20/60 фт, \textit{див Уміння})}
 
 
 \AttacksAdditional{
-\textbf{Бонусна дія:} Лють. \\
-\textbf{Реакція:} Стійкість каменю. \\
+\textbf{ДОДАТКОВІ ЕФЕКТИ ДО АТАК:} \\
+\textbf{Дикий атакувальник (1 / хід):} Кинь кубики шкоди двічі, обери кращий. \\
+\textbf{БОНУСНІ ДІЇ:} \\
+\textbf{Лють (2 / день):} Ввійти в стан Люті. \textit{Див Уміння} \\
+\textbf{РЕАКЦІЇ:} \\
+\textbf{Стійкість каменю (2 / день):} Зменшити отриману шкоду. \textit{Див Уміння}
 }
 
-\OtherProficienciesLanguages{\textbf{Мови:} Спільна мова, Велетова мова, Оркська мова. \\
-\textbf{Зброя}: Проста зброя, Бойова зброя. \\
-\textbf{Броня}: Броня (Легка, Середня), Щити. \\
-\textbf{Інструменти}: Дротики (гра). \\
-\textbf{Збивання:} Якщо влучили по істоті, вона має здійснити Рятівний кидок Статури (Складність 13). При невдачі, впадає в Лежачий стан. \\
-\textbf{Знесилення:} Якщо влучили по істоті, вона отримує перешкоду на наступну атаку до початку вашого наступного ходу.\\
+\OtherProficienciesLanguages{
 }
 
 \Equipment{
+\textbf{Спорядження:}
 \begin{itemize}
-    \item 5 Списів
-    \item Кувалда
-    \item 10 Смолоскипів
+    \item Кувалда \\
+    \item 5 Списів \\
+    \item 10 Смолоскипів \\
 \end{itemize}
-\textbf{Вага:} 27 фунтів. \\
 }
 
 \PersonalityTraits{}
@@ -150,27 +142,21 @@
 \FeaturesTraits{
 \textbf{Особливості Варвара} \\
 \begin{itemize}
-    \item \textbf{Лють} (2 / Трив. відп., +1 / Короткий відп.): Ви можете увійти в стан Люті бонусною дією, якщо не носите важку броню. Ви отримуєте бонус +2 до ушкоджень атаками ближнього бою, що використовують Силу.
-    \item Захист без броні: Якщо ви не носите броню, ваш КЗ дорівнює 10 + модифікатор Спритності + модифікатор Статури (ви можете використовувати щит).
+    \item \textbf{Лють} (2 рази на день): Бонусною дією ти впадаєш у Лють на 1 хвилину. Ти отримуєш +2 до шкоди від атак ближнього бою, а також отримуєш удвічі менше шкоди від дробильних, колотих та рубаних ударів.
 \end{itemize}
 
 \textbf{Особливості Голіата} \\
 \begin{itemize}
-    \item Могутня статура: Перевага на перевірки для завершення стану Схоплений. Ви вважаєтесь на розмір більшими для визначення вантажопідйомності.
+    \item \textbf{Стійкість каменю} (2 рази на день): Коли ти отримуєш шкоду, можеш використати Реакцію, кинути 1d12+2 і зменшити отриману шкоду на цю суму.
 \end{itemize}
 
-\textbf{Походження Гігантів} \\
+\textbf{Особливості Зброї та Атак} \\
 \begin{itemize}
-    \item \textbf{Стійкість каменю} (2 / Трив. відп.): Коли ви отримуєте ушкодження, киньте 1d12+2 і зменште шкоду на цю суму. \\
-\end{itemize}
-
-\textbf{Риси} \\
-\begin{itemize}
-    \item \textbf{Дикий атакувальник}: Раз на хід при влучанні зброєю ви можете кинути кісточки ушкодження двічі та використати кращий результат.
+    \item \textbf{Дикий атакувальник (1 раз на хід):} Коли влучаєш зброєю, можеш кинути кубики шкоди двічі та обрати кращий результат.
+    \item \textbf{Збивання} (Кувалда): Якщо влучив цією зброєю, ворог робить рят. кидок СТА 13. Провал - він падає на землю (збитий з ніг).
+    \item \textbf{Знесилення} (Спис): Якщо влучив цією зброєю, наступна атака цього ворога (до твого наступного ходу) робиться з \textit{Перешкодою}.
 \end{itemize}
 }
-
-% Appearance
 
 \Age{}
 \Height{}
@@ -178,8 +164,6 @@
 \Eyes{}
 \Skin{}
 \Hair{}
-
-% background
 
 \CharacterAppearance{
 }
@@ -203,7 +187,6 @@
 \newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
 \onecolumn
 
-% CHARACTER PAGE
 \pdfbookmark[0]{Character Sheet}{Character Sheet}
 \rendercharactersheet
 

@@ -2,7 +2,7 @@
 \documentclass[letterpaper,openany,oneside,twocolumn]{book}
 \usepackage[ukrainian]{babel}
 \usepackage{bookmark}
-\usepackage[justified]{dnd}
+\usepackage[justified, bg=print]{dnd}
 \usepackage{ifthen}
 \usepackage{geometry}
 \usepackage{pstricks}
@@ -15,23 +15,20 @@
 % Headline
 \CharacterName{Гільда Зупоруб}
 
-% adds only main class and total level to prevent overflow
 \Class{Жрець 1}
-\Background{Послідовник}
+\Background{}
 \PlayerName{}
 \Race{Дворф}
 \Alignment{}
-\XP{Віха}
+\XP{}
 
-% Ability scores
-\StrengthScore{14}
-\DexterityScore{8}
-\ConstitutionScore{10}
-\IntelligenceScore{12}
-\WisdomScore{17}
-\CharismaScore{14}
+\StrengthScore{}
+\DexterityScore{}
+\ConstitutionScore{}
+\IntelligenceScore{}
+\WisdomScore{}
+\CharismaScore{}
 
-% Ability modifiers
 \StrengthModifier{2}
 \DexterityModifier{-1}
 \ConstitutionModifier{0}
@@ -39,7 +36,6 @@
 \WisdomModifier{3}
 \CharismaModifier{2}
 
-% Saving Throws
 \StrengthSavingThrowModifier{2}
 \DexteritySavingThrowModifier{-1}
 \ConstitutionSavingThrowModifier{0}
@@ -66,7 +62,6 @@
 \StealthSkillModifier{-1}
 \SurvivalSkillModifier{2}
 
-% Proficiencies
 \SetStrengthProficiency{0}
 \SetDexterityProficiency{0}
 \SetConstitutionProficiency{0}
@@ -94,7 +89,7 @@
 \SetSurvivalProficiency{0}
 
 \Inspiration{}
-\Proficiency{2}
+\Proficiency{-}
 \Perception{15}
 
 \ArmorClass{14}
@@ -102,50 +97,48 @@
 \Speed{30}
 \MaxHitPoints{9}
 
-\MaxHitDice{1d8}
+\MaxHitDice{}
 \CurrentHitDice{}
 
 \CP{}
 \SP{}
-\GP{60}
+\GP{}
 \EP{}
 \PP{}
 
-
 \AddWeapon{Булава}{+4}{1d6+2 Дроб. (Проста)}
-
-\AddWeapon{Беззбройний удар}{+4}{3 Дробильні}
-\AddWeapon{Спрямований заряд}{+5}{4d6 сяйвом (120 фт., наст. кидок ат. до поч. наст. ходу з перевагою)}
-
+\AddWeapon{Спрямований заряд (чарунка)}{+5}{4d6 сяйвом (120 фт, \textit{див Уміння})}
 
 \AttacksAdditional{
-\textbf{Священне полум'я} 60 фт. Рят. кид. СПР - 1d8 сяйв. \\
-\textbf{Позвін за мертвими} 60 фт. Рят. кид. МУД - 1d8 некрот. Не макс. ПЗ - натомість 1d12 \\
-\textbf{Інші заклин.:} Благословення, Лікування ран, Щит віри \\
-\textbf{Бонусна дія:} Знання каменю (Чуття вібрацій 60 фт. на 10 хв, потрібен камінь). 2 / Тривалий відп. \\
+\textbf{ІНШІ ДІЇ:} \\
+\textbf{Позвін за мертвими:} (60 фт) Ворог робить рят. кидок МУД 13. Провал - 1d8 (або 1d12 якщо ціль поранена). \\
+\textbf{Священне полум'я:} (60 фт) Ворог - СПР 13. Провал - 1d8. \\
+\textbf{Лікування ран (чарунка):} Торкнись - відновлює 2d8+3 ПЗ. \\
+\textbf{Благословення (чарунка):} (30 фт) \textit{Див Уміння}\\
+\textbf{Світло / Дивотворство:} Дрібна небойова магія: ілюзії, звуки, світло тощо. \\
+\textbf{БОНУСНІ ДІЇ:} \\
+\textbf{Щит віри (чарунка):} (60 фт) 1 істота. \textit{Див Уміння} \\
+\textbf{Знання каменю} (60 фт) 10 хв. \textit{Див Уміння}
 }
 
-\OtherProficienciesLanguages{\textbf{Мови:} Спільна мова, Дворфська мова, Півросликова мова. \\
+\OtherProficienciesLanguages{
 \textbf{Почуття:} Темний зір 120 фт. \\
-\textbf{Зброя}: Проста зброя. \\
-\textbf{Броня}: Броня (Легка, Середня), Щит. \\
-\textbf{Інструменти}: Приладдя каліграфа. \\
 }
 
 \Equipment{
+\textbf{Чарунки:} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \\
+\vspace{0.5em}
+
+\textbf{Спорядження:}
 \begin{itemize}
-    \item Кольчужна сорочка
-    \item Булава
-    \item Щит
-    \item Спальник
-    \item Набір для харчування
-    \item 10 Раціонів (на 1 день)
-    \item 50 фт. Конопляна мотузка
-    \item Трутниця
-    \item 10 Смолоскипів
-    \item Бурдюк.
+    \item Кольчужна сорочка \\
+    \item Булава \\
+    \item Щит \\
+    \item 50 фт. Конопляна мотузка \\
+    \item 10 Смолоскипів \\
 \end{itemize}
-\textbf{Вага:} 84 фунтів. \\
 }
 
 \PersonalityTraits{}
@@ -157,20 +150,19 @@
 \Flaws{}
 
 \FeaturesTraits{
-\textbf{Особливості Жреця} \\
-\begin{itemize}
-    \item Чарування
-    \item Божественний орден (Дивотворець): +2 до перевірок Аркани та Релігії.
-\end{itemize}
-
 \textbf{Особливості Дворфа} \\
 \begin{itemize}
     \item Дворфська стійкість: Стійкість до отрути. Перевага на рятівні кидки від стану Отруєний.
-    \item Знання каменю: Бонусною дією можете отримати чуття вібрацій у межах 60 фт на 10 хв. Ви маєте перебувати на кам’яній поверхні або торкатися її, щоб користуватися цим чуттям. (2 / Тривалий відпочинок).
+    \item \textbf{Знання каменю}: Можете отримати чуття вібрацій. Ви маєте перебувати на кам’яній поверхні або торкатися її, щоб користуватися цим чуттям (2 рази на день).
 \end{itemize}
+\textbf{Особливості Заклинань} \\
+\begin{itemize}
+    \item \textbf{Спрямований заряд:} Якщо ти влучив цією атакою, наступна атака по цьому ворогу має \textit{Перевагу}.
+    \item \textbf{Благословення} (Концентрація*): На 1 хвилину, 3 обрані істоти можуть додавати +1d4 до всіх своїх кидків атаки та рятівних кидків. 
+    \item \textbf{Щит віри} (Концентрація*): На 10 хвилин обраний друг отримує +2 до Класу Захисту (КЗ).
+\end{itemize}
+\textbf{*Концентрація:} Можеш підтримувати лише одне таке заклинання одночасно. Якщо ти отримуєш шкоду, маєш кинути СТА 10, щоб не зникла магія.
 }
-
-% Appearance
 
 \Age{}
 \Height{}
@@ -179,137 +171,32 @@
 \Skin{}
 \Hair{}
 
-% background
-
 \CharacterAppearance{
 }
 \AdditionalFeaturesAndTraits{
 }
-
 \Characterbackground{
 }
-
 \Treasure{
 }
-
 \AlliesAndOrganizations{
 }
-
 \OrganizationName{
 }
 
 
-%Magic
 \SpellcastingClass{Жрець 1}
-\SpellcastingAbility{МУД}
+\SpellcastingAbility{}
 \SpellSaveDC{13}
-\SpellAttackBonus{+5}
+\SpellAttackBonus{}
 
 \FirstLevelSpellSlotsTotal{2}
-
-\FirstLevelSpellSlotA{Благословення}
-\FirstLevelSpellSlotAPrepared{True}
-\FirstLevelSpellSlotB{Лікування ран}
-\FirstLevelSpellSlotBPrepared{True}
-\FirstLevelSpellSlotC{Спрямований заряд}
-\FirstLevelSpellSlotCPrepared{True}
-\FirstLevelSpellSlotD{Щит віри}
-\FirstLevelSpellSlotDPrepared{True}
-\CantripSlotA{Світло}
-\CantripSlotB{Священне полум'я}
-\CantripSlotC{Дивотворство}
-\CantripSlotD{Позвін за мертвими}
-
-\newcommand{\spellsheetchoice}{\renderspellsheet}
 
 \begin{document}
 \newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
 \onecolumn
 
-% CHARACTER PAGE
 \pdfbookmark[0]{Character Sheet}{Character Sheet}
 \rendercharactersheet
-
-% SPELLCASTING PAGE
-\pdfbookmark[0]{Spellcasting Sheet}{Spellcasting Sheet}
-\spellsheetchoice
-
-% SPELL LIST
-\clearpage
-\twocolumn
-\pdfbookmark[0]{Spell Reference}{Spell Reference}
-\chapter*{Довідник заклинань}
-\setlength{\parindent}{0pt}
-
-\section*{Замовляння}
-
-\subsection*{Світло}
-\textit{Замовляння, Виклик}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} Дотик \\
-\textbf{Тривалість:} 1 година \\
-Ви торкаєтеся предмета Великого чи меншого розміру, який ніхто не носить і не несе. Поки триває дія чари, предмет випромінює яскраве світло в радіусі 20 футів і тьмяне світло ще на 20 футів. Колір світла обираєте ви.
-
-Чари завершуються, якщо накласти їх знову на той самий предмет.
-
-\subsection*{Священне полум'я}
-\textit{Замовляння, Виклик}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 60 футів \\
-\textbf{Тривалість:} Миттєва \\
-Промінь світла, подібний до полум’я, спадає на істоту, яку ви бачите в межах дистанції. Ціль має здійснити рятівний кидок Спритності або отримує \textbf{1d8} ушкоджень сяйвом. Для цього кидка ігнорується половинне й тричвертне укриття.
-
-\subsection*{Дивотворство}
-\textit{Замовляння, Перетворення}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 30 футів \\
-\textbf{Тривалість:} до 1 хвилини \\
-Ви проявляєте дрібне диво в межах дистанції, обравши один з наведених ефектів. Якщо накладаєте чари кілька разів, можете підтримувати до трьох його хвилинних ефектів одночасно.
-\begin{itemize}
-    \item Зміна очей. Ваші очі набувають іншого вигляду.
-    \item Гучний голос. Ваш голос лунає втричі гучніше звичного, і ви отримуєте перевагу на перевірки Харизми (Залякування).
-    \item Полум’я. Змушуєте вогонь мерехтіти, ставати яскравішим, тощо.
-    \item Невидима рука. Миттю відчиняєте чи зачиняєте незамкнені двері або вікно.
-    \item Фантомний звук. Створюєте миттєвий звук у вибраній точці в межах дистанції.
-    \item Дрижання. Викликаєте нешкідливу тремтливу вібрацію землі.
-\end{itemize}
-
-\subsection*{Позвін за мертвими}
-\textit{Замовляння, Некромантія}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 60 футів \\
-\textbf{Тривалість:} Миттєва \\
-Ціль повинна зробити рятівний кидок Мудрості. При провалі вона отримує \textbf{1d8} некротичної шкоди. Якщо ціль вже має менше ніж максимум ПЗ, вона натомість отримує \textbf{1d12} шкоди.
-
-\section*{1-й рівень}
-
-\subsection*{Благословення}
-\textit{1 рівень, Зчарування}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 30 футів \\
-\textbf{Тривалість:} Концентрація, до 1 хвилини \\
-Ви благословляєте до 3 істот. Коли ціль робить кидок атаки або рятівний кидок до закінчення закляття, вона може кинути \textbf{1d4} і додати результат до суми.
-
-
-\subsection*{Лікування ран}
-\textit{1 рівень, Виклик}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} Дотик \\
-\textbf{Тривалість:} Миттєва \\
-Істота, до якої ви торкаєтеся, відновлює \textbf{2d8 + ваш модифікатор Мудрості (+3)}.
-
-\subsection*{Спрямований заряд}
-\textit{1 рівень, Виклик}\\
-\textbf{Час накладання:} 1 дія \\
-\textbf{Дистанція:} 120 футів \\
-\textbf{Тривалість:} 1 раунд \\
-Ви кидаєте снаряд світла в істоту в межах дистанції. Здійсніть дальню атаку чарами; при влучанні ціль отримує \textbf{4d6} ушкоджень сяйвом, а наступний кидок атаки по ній до кінця вашого наступного ходу виконується з \textbf{перевагою}.
-
-\subsection*{Щит віри}
-\textit{1 рівень, Убезпечення}\\
-\textbf{Час накладання:} 1 бонусна дія \\
-\textbf{Дистанція:} 60 футів \\
-\textbf{Тривалість:} Концентрація, до 10 хвилин \\
-Сяйливе поле охоплює істоту в межах дистанції, надаючи їй бонус +2 до Класу Захисту протягом усієї дії чари.
 
 \end{document}
