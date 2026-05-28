@@ -1,1 +1,1 @@
-export TEXINPUTS="../CharacterGenerator//:"
+export TEXINPUTS="$PWD/../CharacterGenerator//:"
