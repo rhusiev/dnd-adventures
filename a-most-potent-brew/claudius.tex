@@ -1,0 +1,203 @@
+% rubber: module lualatex
+\documentclass[letterpaper,openany,oneside,twocolumn]{book}
+\usepackage[ukrainian]{babel}
+\usepackage{bookmark}
+\usepackage[justified, bg=print]{dnd}
+\usepackage{ifthen}
+\usepackage{geometry}
+\usepackage{pstricks}
+
+\usepackage{dndtemplate}
+
+\setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
+\setlength\evensidemargin{\oddsidemargin}
+
+\CharacterName{Клавдій Треметливий}
+
+\Class{Бард 1}
+\Background{}
+\PlayerName{}
+\Race{Ельф}
+\Alignment{}
+\XP{}
+
+\StrengthScore{}
+\DexterityScore{}
+\ConstitutionScore{}
+\IntelligenceScore{}
+\WisdomScore{}
+\CharismaScore{}
+
+\StrengthModifier{-1}
+\DexterityModifier{2}
+\ConstitutionModifier{1}
+\IntelligenceModifier{0}
+\WisdomModifier{1}
+\CharismaModifier{3}
+
+\StrengthSavingThrowModifier{-1}
+\DexteritySavingThrowModifier{4}
+\ConstitutionSavingThrowModifier{1}
+\IntelligenceSavingThrowModifier{0}
+\WisdomSavingThrowModifier{1}
+\CharismaSavingThrowModifier{5}
+
+\AcrobaticsSkillModifier{4}
+\AnimalHandlingSkillModifier{1}
+\ArcanaSkillModifier{0}
+\AthleticsSkillModifier{-1}
+\DeceptionSkillModifier{5}
+\HistorySkillModifier{0}
+\InsightSkillModifier{1}
+\IntimidationSkillModifier{3}
+\InvestigationSkillModifier{0}
+\MedicineSkillModifier{1}
+\NatureSkillModifier{0}
+\PerceptionSkillModifier{3}
+\PerformanceSkillModifier{5}
+\PersuasionSkillModifier{5}
+\ReligionSkillModifier{0}
+\SleightOfHandSkillModifier{2}
+\StealthSkillModifier{4}
+\SurvivalSkillModifier{1}
+
+\SetStrengthProficiency{0}
+\SetDexterityProficiency{1}
+\SetConstitutionProficiency{0}
+\SetIntelligenceProficiency{0}
+\SetWisdomProficiency{0}
+\SetCharismaProficiency{1}
+
+\SetAcrobaticsProficiency{1}
+\SetAnimalHandlingProficiency{0}
+\SetArcanaProficiency{0}
+\SetAthleticsProficiency{0}
+\SetDeceptionProficiency{1}
+\SetHistoryProficiency{0}
+\SetInsightProficiency{0}
+\SetIntimidationProficiency{0}
+\SetInvestigationProficiency{0}
+\SetMedicineProficiency{0}
+\SetNatureProficiency{0}
+\SetPerceptionProficiency{1}
+\SetPerformanceProficiency{1}
+\SetPersuasionProficiency{1}
+\SetReligionProficiency{0}
+\SetSleightOfHandProficiency{0}
+\SetStealthProficiency{1}
+\SetSurvivalProficiency{0}
+
+\Inspiration{}
+\Proficiency{-}
+\Perception{13}
+
+\ArmorClass{13}
+\Initiative{2}
+\Speed{30}
+\MaxHitPoints{9}
+
+\MaxHitDice{}
+\CurrentHitDice{}
+
+\CP{}
+\SP{}
+\GP{}
+\EP{}
+\PP{}
+
+\AddWeapon{Короткий меч}{+4}{1d6+2 Кол.}
+\AddWeapon{Кинджал}{+4}{1d4+2 Кол. (20/60 фт)}
+
+\AttacksAdditional{
+\textbf{ІНШІ ДІЇ:} \\
+\textbf{Злісне глузування:} (60 фт) Ображаєш ворога. Він робить рят. кидок МУД 13. Провал - 1d4 шкоди та \textit{Перешкода} на його наступну атаку. \\
+\textbf{Огидний сміх (чарунка):} (30 фт) Ворог робить рят. кидок МУД 13. Провал - падає і сміється (\textit{Недієздатний}). Кидає знов укінці свого ходу або якщо отримує шкоду. \\
+\textbf{Громова хвиля (чарунка):} (Куб 15 фт перед тобою) Вороги - рят. кидок СТА 13. Провал - 2d8 громом і відкидаються на 10 фт. Успіх - половина шкоди, не відк. \\
+\textbf{Штукарство:} Дрібні трюки (колір, звук, іскри). \\
+\textbf{БОНУСНІ ДІЇ:} \\
+\textbf{Натхнення барда (3 / день):} (60 фт) 1 союзник. \textit{Див Уміння} \\
+\textbf{Цілюще слово (чарунка):} (60 фт) Віднов. 1d4+3 ПЗ союзнику.
+}
+
+\OtherProficienciesLanguages{%
+\textbf{Почуття:} Темний зір 60 фт. \\
+\textbf{Інструменти:} Лютня.
+}
+
+\Equipment{
+\textbf{Чарунки:} \hspace{0.05em} \\
+\framebox[1.5em]{\rule{0pt}{0.8em}} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \\
+\vspace{0.5em}
+\textbf{Натхнення:} \hspace{0.05em} \\
+\vspace{0.2em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \hspace{0.05em}
+\framebox[1.5em]{\rule{0pt}{0.8em}} \\
+\vspace{0.5em}
+
+\textbf{Спорядження:}
+\begin{itemize}
+    \item Шкіряна броня \\
+    \item Рапіра \\
+    \item 2 Кинджали \\
+    \item Лютня \\
+    \item Набір мандрівника \\
+\end{itemize}
+}
+
+\PersonalityTraits{}
+
+\Ideals{}
+
+\Bonds{}
+
+\Flaws{}
+
+\FeaturesTraits{
+\textbf{Риса передісторії} \\
+\begin{itemize}
+    \item \textbf{Музикант:} Після кожного Короткого або Тривалого відпочинку ти можеш зіграти на лютні й надати \textbf{2 союзникам Натхнення}. Це Натхнення дозволяє гравцю перекинути будь-який один кубик d20, якщо йому не сподобався результат.
+\end{itemize}
+\textbf{Особливості Барда} \\
+\begin{itemize}
+    \item \textbf{Натхнення барда} (3 рази на день): Бонусною дією даєш особі в межах 60 фт один кубик Натхнення (1d6). Після того як союзник кинув d20 на, він може додати цей 1d6 до результату. Якщо навіть з цим бонусом дія союзника провалилася, кубик Натхнення зберігається у нього і не згорає.
+\end{itemize}
+}
+
+\Age{}
+\Height{}
+\Weight{}
+\Eyes{}
+\Skin{}
+\Hair{}
+
+\CharacterAppearance{
+}
+\AdditionalFeaturesAndTraits{
+}
+\Characterbackground{
+}
+\Treasure{
+}
+\AlliesAndOrganizations{
+}
+\OrganizationName{
+}
+
+
+\SpellcastingClass{Бард 1}
+\SpellcastingAbility{}
+\SpellSaveDC{13}
+\SpellAttackBonus{}
+
+\FirstLevelSpellSlotsTotal{2}
+
+\begin{document}
+\newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
+\onecolumn
+
+\pdfbookmark[0]{Character Sheet}{Character Sheet}
+\rendercharactersheet
+
+\end{document}
